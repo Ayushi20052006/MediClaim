@@ -66,7 +66,7 @@ export const WhatsAppChat = ({ onBack, language = "en", t = (k) => k }: { onBack
       from: "bot",
       type: "text",
       time: time(),
-      text: t("Namaste 🙏 I'm ClaimSetu, your insurance claim helper."),
+      text: t("Namaste 🙏 I'm MediClaim, your insurance claim helper."),
     },
     {
       id: uid(),
@@ -221,14 +221,14 @@ export const WhatsAppChat = ({ onBack, language = "en", t = (k) => k }: { onBack
           <div className="relative cursor-pointer hover:opacity-90 transition-opacity">
             <img
               src="fav.jpg"
-              alt="ClaimSetu Logo"
+              alt="MediClaim Logo"
               className="h-8 w-8 rounded-full object-cover shadow-elegant"
             />
             <span className="absolute bottom-0 right-0 h-3.5 w-3.5 rounded-full bg-success ring-2 ring-white dark:ring-black animate-pulse" />
           </div>
           <div className="flex-1 min-w-0 cursor-pointer">
             <p className="font-bold text-base truncate flex items-center gap-1.5 group">
-              ClaimSetu{" "}
+              MediClaim{" "}
               <ShieldCheck className="h-4 w-4 text-primary group-hover:scale-110 transition-transform" />
             </p>
             <p className="text-[13px] opacity-80 font-medium tracking-wide">

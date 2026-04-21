@@ -69,7 +69,7 @@ export async function generateClaimPdf(data: ClaimData, attachedFiles?: { src: s
       }
     }
 
-    pdf.save(`ClaimSetu_TPA_Form_${(data.patient_name || "claim").replace(/\s+/g, "_")}.pdf`);
+    pdf.save(`MediClaim_TPA_Form_${(data.patient_name || "claim").replace(/\s+/g, "_")}.pdf`);
   } catch (error) {
     console.error("Failed to generate PDF", error);
   } finally {

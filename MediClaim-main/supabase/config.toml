@@ -1,4 +1,0 @@
-project_id = "oijxfalhkbvidsbmbruk"
-
-[functions.analyze-bill]
-verify_jwt = false

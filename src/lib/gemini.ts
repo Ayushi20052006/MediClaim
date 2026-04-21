@@ -5,7 +5,7 @@ export const callGeminiChat = async (message: string, history: any[], context: a
     throw new Error("Missing VITE_GEMINI_API_KEY in .env");
   }
 
-  let systemPrompt = `You are ClaimSetu, an expert, highly empathetic Indian health insurance claim assistant.
+  let systemPrompt = `You are MediClaim, an expert, highly empathetic Indian health insurance claim assistant.
 You are chatting with a user on WhatsApp.
 
 CRITICAL INSTRUCTIONS:

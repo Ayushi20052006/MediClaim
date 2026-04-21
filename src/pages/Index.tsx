@@ -12,9 +12,9 @@ const Index = () => {
   };
 
   useEffect(() => {
-    document.title = "ClaimSetu — AI Health Insurance Claims on WhatsApp";
+    document.title = "MediClaim — AI Health Insurance Claims on WhatsApp";
     const desc =
-      "Send a photo of your medical bill on WhatsApp. ClaimSetu's AI extracts the data, detects errors, and prepares a ready-to-submit health insurance claim PDF.";
+      "Send a photo of your medical bill on WhatsApp. MediClaim's AI extracts the data, detects errors, and prepares a ready-to-submit health insurance claim PDF.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -39,10 +39,10 @@ const Index = () => {
           <div className="flex items-center gap-2.5">
             <img
               src="fav.jpg"
-              alt="ClaimSetu Logo"
+              alt="MediClaim Logo"
               className="h-8 w-8 rounded-full object-cover shadow-elegant"
             />{" "}
-            <span className="font-bold text-lg tracking-tight">ClaimSetu</span>
+            <span className="font-bold text-lg tracking-tight">MediClaim</span>
           </div>
           <div className="flex items-center gap-4">
             <select
@@ -74,11 +74,11 @@ const Index = () => {
       >
         <div className="text-center max-w-2xl mx-auto mb-16">
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-foreground">
-            {t("Why ClaimSetu wins")}
+            {t("Why MediClaim wins")}
           </h2>
           <p className="text-muted-foreground mt-4 text-lg leading-relaxed">
             {t(
-              "Indian patients lose lakhs every year to claim rejections caused by tiny mistakes. ClaimSetu catches them before submission.",
+              "Indian patients lose lakhs every year to claim rejections caused by tiny mistakes. MediClaim catches them before submission.",
             )}
           </p>
         </div>
@@ -127,10 +127,10 @@ const Index = () => {
           <div className="flex items-center gap-2.5">
             <img
               src="fav.jpg"
-              alt="ClaimSetu Logo"
+              alt="MediClaim Logo"
               className="h-8 w-8 rounded-full object-cover shadow-elegant"
             />{" "}
-            <span className="font-bold text-lg tracking-tight">ClaimSetu</span>
+            <span className="font-bold text-lg tracking-tight">MediClaim</span>
           </div>
           <div className="flex items-center gap-6 text-sm text-muted-foreground font-medium">
             <a href="#" className="hover:text-primary transition-colors">
@@ -144,7 +144,7 @@ const Index = () => {
             </a>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} ClaimSetu. {t("All rights reserved.")}
+            © {new Date().getFullYear()} MediClaim. {t("All rights reserved.")}
           </p>
         </div>
       </footer>

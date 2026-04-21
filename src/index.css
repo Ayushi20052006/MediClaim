@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ClaimSetu Design System — Modern Healthcare Trust */
+/* MediClaim Design System — Modern Healthcare Trust */
 @layer base {
   :root {
     --background: 138 25% 98%;

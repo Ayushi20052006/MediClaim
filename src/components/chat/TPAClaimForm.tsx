@@ -24,7 +24,7 @@ const translations: Record<string, Record<string, string>> = {
     "Date of Bill:": "बिल की तारीख:",
     "Bill Number:": "बिल संख्या:",
     "Total Amount (INR):": "कुल राशि (रुपये):",
-    "D. CLAIMSETU AI ANALYSIS": "डी. क्लेमसेतु एआई विश्लेषण",
+    "D. MediClaim AI ANALYSIS": "डी. क्लेमसेतु एआई विश्लेषण",
     "Policy Rule Application:": "पॉलिसी नियम लागू:",
     "Predicted Deductions (Consumables):": "संभावित कटौती (उपभोग्य वस्तुएं):",
     "Missing / Invalid Fields:": "गायब / अमान्य फ़ील्ड:",
@@ -33,7 +33,7 @@ const translations: Record<string, Record<string, string>> = {
     "E. ATTACHED BILL COPY": "ई. संलग्न बिल की प्रति",
     "E. ATTACHED DOCUMENTS": "ई. संलग्न दस्तावेज़",
     "Document Attached:": "संलग्न दस्तावेज़:",
-    "Generated securely by ClaimSetu AI": "क्लेमसेतु एआई द्वारा सुरक्षित रूप से उत्पन्न",
+    "Generated securely by MediClaim AI": "क्लेमसेतु एआई द्वारा सुरक्षित रूप से उत्पन्न",
   },
   ta: {
     "HEALTH INSURANCE CLAIM FORM - PART A": "சுகாதார காப்பீட்டு கோரிக்கை படிவம் - பகுதி A",
@@ -50,7 +50,7 @@ const translations: Record<string, Record<string, string>> = {
     "Date of Bill:": "பில் தேதி:",
     "Bill Number:": "பில் எண்:",
     "Total Amount (INR):": "மொத்த தொகை (INR):",
-    "D. CLAIMSETU AI ANALYSIS": "D. ClaimSetu AI பகுப்பாய்வு",
+    "D. MediClaim AI ANALYSIS": "D. MediClaim AI பகுப்பாய்வு",
     "Policy Rule Application:": "பாலிசி விதி பயன்பாடு:",
     "Predicted Deductions (Consumables):": "கணிக்கப்பட்ட விலக்குகள் (நுகர்பொருட்கள்):",
     "Missing / Invalid Fields:": "விடுபட்ட / தவறான புலங்கள்:",
@@ -59,7 +59,7 @@ const translations: Record<string, Record<string, string>> = {
     "E. ATTACHED BILL COPY": "E. இணைக்கப்பட்ட பில் நகல்",
     "E. ATTACHED DOCUMENTS": "E. இணைக்கப்பட்ட ஆவணங்கள்",
     "Document Attached:": "இணைக்கப்பட்ட ஆவணம்:",
-    "Generated securely by ClaimSetu AI": "ClaimSetu AI ஆல் பாதுகாப்பாக உருவாக்கப்பட்டது",
+    "Generated securely by MediClaim AI": "MediClaim AI ஆல் பாதுகாப்பாக உருவாக்கப்பட்டது",
   },
   ml: {
     "HEALTH INSURANCE CLAIM FORM - PART A": "ആരോഗ്യ ഇൻഷുറൻസ് ക്ലെയിം ഫോം - ഭാഗം എ",
@@ -76,7 +76,7 @@ const translations: Record<string, Record<string, string>> = {
     "Date of Bill:": "ബിൽ തീയതി:",
     "Bill Number:": "ബിൽ നമ്പർ:",
     "Total Amount (INR):": "മൊത്തം തുക (INR):",
-    "D. CLAIMSETU AI ANALYSIS": "ഡി. ക്ലെയിംസേതു എഐ വിശകലനം",
+    "D. MediClaim AI ANALYSIS": "ഡി. ക്ലെയിംസേതു എഐ വിശകലനം",
     "Policy Rule Application:": "പോളിസി റൂൾ പ്രയോഗം:",
     "Predicted Deductions (Consumables):": "പ്രതീക്ഷിക്കുന്ന കിഴിവുകൾ (ഉപഭോഗവസ്തുക്കൾ):",
     "Missing / Invalid Fields:": "നഷ്ടപ്പെട്ട / അസാധുവായ ഫീൽഡുകൾ:",
@@ -85,7 +85,7 @@ const translations: Record<string, Record<string, string>> = {
     "E. ATTACHED BILL COPY": "ഇ. അറ്റാച്ച് ചെയ്ത ബിൽ പകർപ്പ്",
     "E. ATTACHED DOCUMENTS": "ഇ. അറ്റാച്ച് ചെയ്ത രേഖകൾ",
     "Document Attached:": "അറ്റാച്ചുചെയ്ത രേഖ:",
-    "Generated securely by ClaimSetu AI": "ClaimSetu AI സുരക്ഷിതമായി ജനറേറ്റ് ചെയ്തു",
+    "Generated securely by MediClaim AI": "MediClaim AI സുരക്ഷിതമായി ജനറേറ്റ് ചെയ്തു",
   },
   bn: {
     "HEALTH INSURANCE CLAIM FORM - PART A": "স্বাস্থ্য বীমা দাবি ফর্ম - পার্ট এ",
@@ -102,7 +102,7 @@ const translations: Record<string, Record<string, string>> = {
     "Date of Bill:": "বিলের তারিখ:",
     "Bill Number:": "বিল নম্বর:",
     "Total Amount (INR):": "মোট পরিমাণ (INR):",
-    "D. CLAIMSETU AI ANALYSIS": "ডি. ClaimSetu এআই বিশ্লেষণ",
+    "D. MediClaim AI ANALYSIS": "ডি. MediClaim এআই বিশ্লেষণ",
     "Policy Rule Application:": "পলিসি নিয়ম প্রয়োগ:",
     "Predicted Deductions (Consumables):": "অনুমানিত কর্তন (ব্যবহার্য দ্রব্য):",
     "Missing / Invalid Fields:": "অনুপস্থিত / অবৈধ ক্ষেত্র:",
@@ -111,7 +111,7 @@ const translations: Record<string, Record<string, string>> = {
     "E. ATTACHED BILL COPY": "ই. সংযুক্ত বিলের অনুলিপি",
     "E. ATTACHED DOCUMENTS": "ই. সংযুক্ত নথিপত্র",
     "Document Attached:": "সংযুক্ত নথি:",
-    "Generated securely by ClaimSetu AI": "ClaimSetu AI দ্বারা নিরাপদে তৈরি",
+    "Generated securely by MediClaim AI": "MediClaim AI দ্বারা নিরাপদে তৈরি",
   }
 };
 
@@ -252,7 +252,7 @@ export const TPAClaimForm = ({ data, attachedFiles, language }: Props) => {
         <div>
           <div style={{ backgroundColor: "#f1f5f9", padding: "10px 16px", marginBottom: "16px", borderRadius: "4px" }}>
             <h2 style={{ margin: 0, fontSize: "16px", color: "#0f172a", fontWeight: "bold" }}>
-              {t("D. CLAIMSETU AI ANALYSIS")}
+              {t("D. MediClaim AI ANALYSIS")}
             </h2>
           </div>
           
@@ -307,7 +307,7 @@ export const TPAClaimForm = ({ data, attachedFiles, language }: Props) => {
       </div> {/* Closes the padding="40px" content wrapper */}
         
       <div style={{ marginTop: "auto", paddingTop: "40px", borderTop: "1px solid #e2e8f0", textAlign: "center", color: "#64748b", fontSize: "12px", paddingBottom: "20px" }}>
-        {t("Generated securely by ClaimSetu AI")}
+        {t("Generated securely by MediClaim AI")}
       </div>
     </div>
 
@@ -335,7 +335,7 @@ export const TPAClaimForm = ({ data, attachedFiles, language }: Props) => {
             </div>
             
             <div style={{ marginTop: "auto", paddingTop: "20px", paddingBottom: "20px", borderTop: "1px solid #e2e8f0", textAlign: "center", color: "#64748b", fontSize: "12px" }}>
-              {t("Generated securely by ClaimSetu AI")}
+              {t("Generated securely by MediClaim AI")}
             </div>
           </div>
         ))}
