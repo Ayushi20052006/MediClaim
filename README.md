@@ -1,77 +1,156 @@
-# [cite_start]MediClaim: The Zero-UI Medical Claim Agent for Bharat [cite: 1, 2]
+# 🏥 MediClaim (ClaimEase)
 
-[cite_start]**"No App. No English. No Rejections."** [cite: 22]
+### *The Zero-UI Multilingual Medical Claim Agent for Bharat*
 
-[cite_start]MediClaim is a "Zero-UI" AI agent designed to remove the friction of filing health insurance claims in India[cite: 12]. [cite_start]Instead of complex apps, users interact via WhatsApp using voice notes in their native language and photos of physical bills[cite: 13].
+[![Vite](https://img.shields.io/badge/Vite-8A2BE2?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Gemini](https://img.shields.io/badge/Gemini_2.5_Flash-1A73E8?style=for-the-badge&logo=google-gemini&logoColor=white)](https://ai.google.dev/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![Vitest](https://img.shields.io/badge/Vitest-729B1B?style=for-the-badge&logo=vitest&logoColor=white)](https://vitest.dev/)
+
+> **"No App. No English. No Rejections."**
+>
+> MediClaim is a **Zero-UI** health insurance claim agent designed for Bharat. It strips away the friction of filing medical claims by allowing patients to interact strictly inside **WhatsApp**—sending physical medical bill photos, prescriptions, and regional voice notes. The AI extracts structured details, flags missing parameters that could trigger rejections, audits items against policy limits, and compiles clean, standardized Third-Party Administrator (TPA) claim PDFs.
 
 ---
 
-## [cite_start]🏥 The Problem [cite: 3]
-[cite_start]The claim filing process in India remains fundamentally broken for the average citizen due to several factors: [cite: 4]
-* [cite_start]**High Cognitive Load**: Navigating complex apps and English-only insurance jargon[cite: 5].
-* [cite_start]**Document Friction**: Messy, handwritten prescriptions and faded pharmacy bills[cite: 8].
-* [cite_start]**Delayed Rejections**: Claims rejected after weeks due to missing stamps or signatures[cite: 9].
-* [cite_start]**Language Barrier**: Most systems alienate non-English speaking demographics[cite: 10].
+## 🏥 The Problem in Bharat
 
-## [cite_start]✨ Core Features [cite: 15]
-* [cite_start]**Multimodal Document Extraction**: Reads handwritten doctor prescriptions and thermal receipts[cite: 16].
-* [cite_start]**Voice-First Conversational Interface**: Allows interaction via regional voice notes[cite: 17].
-* [cite_start]**Instant Error Detection**: Scans for mandatory elements like doctor signatures and hospital stamps before submission[cite: 18].
-* [cite_start]**Policy Rule Engine**: Cross-references expenses against specific policy limits and exclusions[cite: 19].
-* [cite_start]**Auto-Claim Generation**: Compiles approved data into standardized PDF formats required by TPAs[cite: 20].
+The traditional health insurance claim filing process in India is fundamentally broken for the average citizen due to:
 
-## [cite_start]🛠 Tech Stack [cite: 24]
-| Component | Technology | Purpose |
-| :--- | :--- | :--- |
-| **User Interface** | WhatsApp Business API | [cite_start]The "Zero-UI" frontend for interaction[cite: 26]. |
-| **Core AI Engine** | Google Gemini 1.5 Pro API | [cite_start]Multimodal analysis and policy reasoning[cite: 26]. |
-| **Voice & Language** | Google Cloud Translation & Speech APIs | [cite_start]Processing vernacular voice notes[cite: 26]. |
-| **Backend & Logic** | Node.js / Express | [cite_start]Webhook server for messaging loops[cite: 26]. |
-| **Database & Storage**| Firebase / Supabase | [cite_start]Secure storage for sessions and medical documents[cite: 26]. |
+*   **High Cognitive Load**: Navigating complex portals, deciphering insurance jargon, and filling out pages of English-only forms during times of medical stress.
+*   **Document Friction**: Messy, handwritten doctor prescriptions, thermal receipts that fade, and missing stamps or signatures that go unnoticed.
+*   **Delayed Rejections**: Claims being rejected weeks after discharge due to minor errors (e.g. faded pharmacy dates or missing doctor stamps), resulting in severe cash-flow issues.
+*   **Language Barrier**: Traditional channels alienate the non-English-speaking majorities of India, creating digital exclusion.
+
+---
+
+## ✨ Key Features
+
+*   💬 **WhatsApp UI Simulation**: A pixel-perfect, highly responsive, desktop and mobile-friendly simulation of a WhatsApp chat window to demonstrate the "Zero-UI" patient flow.
+*   🗣 **Vernacular Native Agent**: Converses fluidly in regional languages. Supported languages include:
+    *   🇬🇧 **English**
+    *   🇮🇳 **Hindi (हिंदी) & Hinglish (Hinglish-mix)**
+    *   🇮🇳 **Tamil (தமிழ்)**
+    *   🇮🇳 **Malayalam (മലയാളം)**
+    *   🇮🇳 **Bengali (বাংলা)**
+*   📸 **Multimodal OCR & Document Parsing**: Upload multiple files simultaneously (images or PDFs of bills, prescriptions, pharmacy receipts) to extract critical claim elements automatically.
+*   ⚖️ **Interactive Policy Auditor**: Toggle a **Demo Policy Rule Engine** (with standard limits like *₹3 Lakh Sum Insured*, *1% Room Rent Cap (₹3,000/day)*, and *non-payable consumables rule*) to instantly run audits on bill items.
+*   ✂️ **Deduction Predictor**: Flags specific non-payable consumables (e.g., gloves, syringes, nebulizer kits) and lists them as deductions so patients understand their exact covered amount.
+*   🛡️ **Proactive Error & Stamp Detection**: Evaluates the bills for critical missing elements—such as hospital stamps or physician signatures—and prompts the patient to fix them before submitting.
+*   📄 **Multilingual TPA Form PDF Generation**: Renders a standard **Health Insurance Claim Form (Part A)** natively translated into the chosen language, attaches copies of the bills, and compiles a comprehensive claim bundle PDF ready to be printed or submitted.
+
+---
+
+## ⚡ Architectural Decisions & Highlights
+
+> [!TIP]
+> The prototype implements high-performance conversational patterns that eliminate the need for heavy backend infrastructure during client-side demonstrations.
+
+### 1. Flyweight Context Passing
+Instead of maintaining a heavy SQL database session state to track files, the frontend stores the parsed document JSON (`ClaimData`) in the localized state. It then **injects the document data dynamically as a system instruction** into the Gemini chat payload. The AI natively retains memory of the document being discussed without any database sync latency.
+
+### 2. Hinglish & Multilingual Conversational Prompts
+The core prompt instructs the AI to be highly empathetic and vernacular. If a user inputs Hinglish (e.g., *"Is bill ka claim kaise milega?"*), the agent automatically replies in the exact same Hinglish script, maintaining comfort and reassurance.
+
+### 3. Direct Gemini SDK Calling (`src/lib/gemini.ts`)
+To prevent CORS constraints and deploy edge-function version mismatches during client tests, the chat utilizes the stable Google Generative Language endpoints directly using **`gemini-2.5-flash`**. 
+*   **Alternating History Optimizer**: The engine dynamically formats consecutive roles (e.g., merging multiple consecutive user text/file nodes) to comply with Google's strict alternating `user` and `model` API payload schema.
+
+### 4. Client-side PDF Synthesis
+Utilizes React `createRoot` inside a detached viewport container, loads Google Noto Sans regional fonts dynamically for language rendering, and prints individual pages (main claim + document attachments) into high-fidelity PDFs via `html2canvas` and `jsPDF`.
+
+---
 
 ## 📁 Project Structure
-The project is organized as follows:
+
 ```text
 claim-ease-main/
-├── src/                
-│   ├── components/     # UI elements (e.g., WhatsAppChat simulated UI, Claim Summary)
-│   ├── lib/            # Utilities (`gemini.ts` AI chat integration)
-│   └── docs/           # Any other project logic
-├── supabase/           # Database configurations and edge functions (`analyze-bill`)
-└── vite.config.ts      # Build tool configuration
+├── public/                 # Static assets, branding, and logos
+├── src/
+│   ├── components/
+│   │   ├── chat/
+│   │   │   ├── ChatBubble.tsx        # Standard chat message design
+│   │   │   ├── ClaimSummaryCard.tsx  # Interactive parsed invoice summary card
+│   │   │   ├── Hero.tsx              # Beautiful multilingual landing screen
+│   │   │   ├── TPAClaimForm.tsx      # Standardized TPA Form template (HTML layout)
+│   │   │   ├── TypingBubble.tsx      # Realistic chat typing status indicator
+│   │   │   └── WhatsAppChat.tsx      # Core chat engine, state, and file handler
+│   │   ├── ui/                       # Tailwind + Shadcn UI primitives (Buttons, Progress, etc.)
+│   │   └── NavLink.tsx               # Utility navigation components
+│   ├── hooks/                        # Local React hooks (toast, mobile detection)
+│   ├── integrations/                 # Client configurations (Supabase connection)
+│   ├── lib/
+│   │   ├── claim-pdf.tsx             # detached viewport React-to-PDF compiler
+│   │   ├── gemini.ts                 # Direct Gemini API wrappers (Analysis & Chat)
+│   │   ├── i18n.ts                   # Complete localization and translation matrices
+│   │   └── utils.ts                  # Tailwind class mergers
+│   ├── pages/
+│   │   ├── Index.tsx                 # Main application controller
+│   │   └── NotFound.tsx              # Fallback 404 routing screen
+│   └── test/                         # Core test suite
+│       ├── example.test.ts
+│       └── setup.ts
+├── supabase/                         # Supabase Edge Functions (chat-bot & analyze-bill)
+├── vite.config.ts                    # Vite build configs
+└── vitest.config.ts                  # Unit testing configurations
 ```
 
 ---
 
-## 🚀 Recent Implementation & Architecture Updates
+## 🚀 Getting Started
 
-To guarantee that this repository works properly when cloned to a new device or environment, here is a summary of the recently implemented features and workarounds:
+### Prerequisites
 
-### 1. Prototype Simulation Architecture
-While the end-goal stack uses Node.js/Express, this repository currently acts as a **Vite + React prototype** to visually simulate the WhatsApp experience. Because it is a frontend prototype, there are no `/webhook` controllers inside this workspace.
+Ensure you have [Bun](https://bun.sh/) or [Node.js](https://nodejs.org/) installed on your machine.
 
-### 2. Conversational Context Injection (No Database Overhead)
-Instead of forcing a heavy backend database migration (like Firebase or Supabase Postgres tables) to remember the patient's context between messages, we implemented localized "flyweight" context passing:
-- Whenever you upload a document, `analyze-bill` extracts the structured JSON (Hospital Name, Date, Amount, Missing Stamps).
-- This JSON object (`ClaimData`) is kept in the UI state and dynamically injected as a hidden system instruction into **every single LLM chat payload**. 
-- The AI natively remembers the document it's discussing without any backend database syncing.
+### 1. Environment Setup
 
-### 3. Hinglish & Empathetic Agent Prompts
-We completely rewrote the internal System Instructions for the ChatBot. The AI model is strictly commanded to:
-- Acknowledge Hinglish inputs natively (e.g., *"Is bill ka claim kaise milega?"*).
-- Show extreme empathy, shifting the cognitive load off the patient by taking ownership (*"Main check kar leta hoon"*).
-- Cross-reference questions with the active document context provided.
+Create a `.env` file at the root of the project and populate it with your API credentials:
 
-### 4. Gemini API Integration (`lib/gemini.ts`)
-We bypassed the remote Supabase Edge Function (`chat-bot`) for the chat system. Because deploying Supabase models remotely can cause CORS issues or versioning mismatches during local testing, we now directly call the Gemini API from the frontend via `src/lib/gemini.ts`.
-- **Model Used:** We use the stable `gemini-2.5-flash` model. (Attempting to call legacy or preview strings like `gemini-1.5-flash` or `gemini-3.1-flash` will result in a 404 from Google's API).
-- **History formatting:** The script intercepts the raw conversation array, flattens consecutive roles, and safely forces alternating `user` / `model` history so that the Gemini API avoids 400 Bad Request errors.
-
-### Local Setup
-Ensure you have the following in your `.env` file at the root:
 ```env
-VITE_GEMINI_API_KEY="your_api_key_here"
-VITE_SUPABASE_URL="..."
-VITE_SUPABASE_ANON_KEY="..."
+# Gemini API Access (Required for chat bot and vision analysis)
+VITE_GEMINI_API_KEY="YOUR_GOOGLE_GEMINI_API_KEY"
+
+# Supabase Auth/Client Details (Required for backend integrations)
+VITE_SUPABASE_URL="YOUR_SUPABASE_PROJECT_URL"
+VITE_SUPABASE_ANON_KEY="YOUR_SUPABASE_ANON_KEY"
 ```
-Run `npm install` and then `npm run dev` to start the simulated app.
+
+### 2. Install Dependencies
+
+Using **Bun**:
+```bash
+bun install
+```
+
+Using **npm**:
+```bash
+npm install
+```
+
+### 3. Run Development Server
+
+Launch the local server:
+```bash
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser to experience the simulated chat agent.
+
+---
+
+## 🧪 Testing
+
+The codebase includes standard unit and integration tests powered by **Vitest**. To execute the test suite:
+
+```bash
+npm run test
+```
+
+---
+
+## 🛡️ License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
